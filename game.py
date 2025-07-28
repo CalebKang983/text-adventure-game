@@ -78,8 +78,12 @@ def physics_classrooom(player):
 def Library(player,game_map):
     print("You are in the Library!")
     if player.has_key:
-        print("You found hints from a book!")
-        hint(game_map)
+        choice = str(input("Are you going to use your key?(Y/N)"))
+        if choice == "Y":
+            print("You found hints from a book!")
+            hint(game_map)
+    else:
+        print("The door is locked!")
 
 def hint(game_map):
     danger_num = []
